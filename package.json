@@ -1,0 +1,23 @@
+{
+  "name": "spatial-audio",
+  "version": "1.0.0",
+  "description": "spatial audio example with three.js and tone.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/birdlaketree/spatial-audio.git"
+  },
+  "keywords": [
+    "3d",
+    "sound"
+  ],
+  "author": "vedran.kolac@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/birdlaketree/spatial-audio/issues"
+  },
+  "homepage": "https://github.com/birdlaketree/spatial-audio#readme"
+}
