@@ -104,8 +104,9 @@ dist
 .tern-port
 
 # Parcel relatec
+.cache/
 .parcel-cache/
-.parcel-cache
+dist/
 
 # osx
 .DS_Store
