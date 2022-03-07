@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/birdlaketree/spatial-audio/issues"
   },
-  "homepage": "https://github.com/birdlaketree/spatial-audio#readme"
+  "homepage": "https://github.com/birdlaketree/spatial-audio#readme",
+  "devDependencies": {
+    "parcel": "^2.3.2"
+  }
 }
