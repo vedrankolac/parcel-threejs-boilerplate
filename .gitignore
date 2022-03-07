@@ -104,4 +104,4 @@ dist
 .tern-port
 
 # Parcel relatec
-.parcel-cache
+.parcel-cache/
