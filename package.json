@@ -3,7 +3,6 @@
   "source": "src/index.html",
   "version": "1.0.0",
   "description": "spatial audio example with three.js and tone.js",
-  "main": "index.js",
   "scripts": {
     "start": "parcel",
     "build": "parcel build",

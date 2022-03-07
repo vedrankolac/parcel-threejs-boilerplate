@@ -1,1 +1,3 @@
-console.log('Hello world!');
+import Rectangle from './shapes/Rectangle.js';
+
+console.log('Hello World!');
