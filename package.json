@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/birdlaketree/spatial-audio#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.3.2",
     "parcel": "^2.3.2"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
