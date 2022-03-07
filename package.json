@@ -15,7 +15,7 @@
     "sound"
   ],
   "author": "vedran.kolac@gmail.com",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/birdlaketree/spatial-audio/issues"
   },
