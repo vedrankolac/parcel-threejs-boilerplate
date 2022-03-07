@@ -1,5 +1,13 @@
 {
   "name": "spatial-audio",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "latest"
+  },
   "version": "1.0.0",
   "description": "spatial audio example with three.js and tone.js",
   "main": "index.js",
