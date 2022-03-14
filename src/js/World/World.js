@@ -22,15 +22,16 @@ class World {
     const lights = createLights(scene);
     const material = blue(0x222266);
 
-    const cube_0 = cube(material);
-    scene.add( cube_0 );
-    cube_0.position.x = 2;
-
-    const sphere_0 = sphere(material);
-    scene.add( sphere_0 );
-    sphere_0.position.x = -2;
-
-    loop.updatables.push(cube_0);
+    const nItems = 4;
+    for (let i = 0; i < nItems; i++) {
+      for (let j = 0; j < nItems; j++) {
+        let temp_cube = cube(material);
+        temp_cube.position.x = (i - nItems/2) * 1.2 + 0.5;
+        temp_cube.position.y = (j - nItems/2) * 1.2 + 0.5;
+        scene.add( temp_cube );
+        loop.updatables.push(temp_cube);
+      }
+    }
   }
 
   start() {
