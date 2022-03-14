@@ -1,51 +1,27 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
-import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js'
 import { Loop } from './system/Loop.js';
 import { createRenderer } from './system/renderer.js';
 import { createScene } from './components/scene.js';
 import { createCamera } from './components/camera.js';
-// import hdr from './textures/studio_small_08_4k.hdr';
+import { createLights } from './components/lights.js';
 
 let camera;
 let renderer;
 let scene;
 let loop;
 let controls;
+let lights;
 
 class World {
   constructor() {
 
     renderer = createRenderer();
-    scene = createScene();
+    scene = createScene(renderer);
     camera = createCamera();
     loop = new Loop(camera, scene, renderer);
     controls = new OrbitControls(camera, renderer.domElement)
-
-    const pmremGenerator = new THREE.PMREMGenerator(renderer);
-    // scene.environment = pmremGenerator.fromScene( new RoomEnvironment(), 0.001 ).texture;
-
-    // lights
-
-    const light_ambient = new THREE.AmbientLight({ color: 0x000000, intensity: 1 })
-    scene.add(light_ambient)
-
-    const light = new THREE.DirectionalLight('white', 2);
-    light.position.set(6, 6, 6);
-    scene.add(light)
-
-    // const light1 = new THREE.PointLight( 0xffffff, 200, 0 );
-    // light1.position.set( 0, 200, 0 );
-    // scene.add( light1 );
-
-    // const light2 = new THREE.PointLight( 0xffffff, 200, 0 );
-    // light2.position.set( 100, 200, 100 );
-    // scene.add( light2 );
-
-    // const light3 = new THREE.PointLight( 0xffffff, 200, 0 );
-    // light3.position.set( - 100, - 200, - 100 );
-    // scene.add( light3 );
+    lights = createLights(scene);
 
     const geometry_box = new THREE.BoxGeometry();
     const geometry_sphere = new THREE.SphereGeometry();
