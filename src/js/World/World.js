@@ -47,10 +47,6 @@ class World {
     // light3.position.set( - 100, - 200, - 100 );
     // scene.add( light3 );
 
-    // geometry
-
-    // ---
-
     const geometry_box = new THREE.BoxGeometry();
     const geometry_sphere = new THREE.SphereGeometry();
     const material = new THREE.MeshStandardMaterial({
@@ -59,38 +55,6 @@ class World {
       roughness: 0.01,
       metalness: 0.01
     });
-
-    const resolve = (hdrmap) => {
-      console.log('resolved');
-
-      console.log('loaded');
-
-      let envmap = envmaploader.fromCubemap(hdrmap);
-      let materialEnv = new THREE.MeshPhysicalMaterial({
-        color: 0x222266,
-        emissive: 0x000000,
-        roughness: 0.01,
-        metalness: 0.01,
-        envMap: envmap.texture
-      });
-
-      const sphere_0 = new THREE.Mesh(geometry_sphere, materialEnv);
-      scene.add(sphere_0);
-
-    }
-
-    const exception = () => {
-      console.log('exception');
-    }
-
-    const envmaploader = new THREE.PMREMGenerator(renderer);
-    const loader = new RGBELoader();
-    loader.setPath('./textures/');
-    loader.load('studio_small_08_4k.hdr', resolve, undefined, exception);
-
-    // ---
-
-    // create meshes
 
     const cube_1 = new THREE.Mesh( geometry_box, material );
     cube_1.position.x = 2;
@@ -117,7 +81,6 @@ class World {
     sphere_2.position.y = -2;
     sphere_2.position.z = -6;
     scene.add( sphere_2 );
-
 
     cube_1.tick = (delta) => {
       // increase the cube's rotation each frame
