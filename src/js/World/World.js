@@ -5,6 +5,7 @@ import { createRenderer } from './system/renderer.js';
 import { createScene } from './components/scene.js';
 import { createCamera } from './components/camera.js';
 import { createLights } from './components/lights.js';
+import { materialBlue} from './components/material_blue.js';
 
 let camera;
 let renderer;
@@ -15,7 +16,6 @@ let lights;
 
 class World {
   constructor() {
-
     renderer = createRenderer();
     scene = createScene(renderer);
     camera = createCamera();
@@ -25,12 +25,7 @@ class World {
 
     const geometry_box = new THREE.BoxGeometry();
     const geometry_sphere = new THREE.SphereGeometry();
-    const material = new THREE.MeshStandardMaterial({
-      color: 0x222266,
-      emissive: 0x000000,
-      roughness: 0.01,
-      metalness: 0.01
-    });
+    const material = materialBlue(0x222266);
 
     const cube_1 = new THREE.Mesh( geometry_box, material );
     cube_1.position.x = 2;
