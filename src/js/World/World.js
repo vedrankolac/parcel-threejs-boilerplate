@@ -5,27 +5,22 @@ import { createRenderer } from './system/renderer.js';
 import { createScene } from './components/scene.js';
 import { createCamera } from './components/camera.js';
 import { createLights } from './components/lights.js';
-import { materialBlue} from './components/material_blue.js';
+import { blue } from './components/materials/blue.js';
 
-let camera;
-let renderer;
-let scene;
 let loop;
-let controls;
-let lights;
 
 class World {
   constructor() {
-    renderer = createRenderer();
-    scene = createScene(renderer);
-    camera = createCamera();
+    const renderer = createRenderer();
+    const scene = createScene(renderer);
+    const camera = createCamera();
     loop = new Loop(camera, scene, renderer);
-    controls = new OrbitControls(camera, renderer.domElement)
-    lights = createLights(scene);
+    const controls = new OrbitControls(camera, renderer.domElement)
+    const lights = createLights(scene);
 
     const geometry_box = new THREE.BoxGeometry();
     const geometry_sphere = new THREE.SphereGeometry();
-    const material = materialBlue(0x222266);
+    const material = blue(0x222266);
 
     const cube_1 = new THREE.Mesh( geometry_box, material );
     cube_1.position.x = 2;
