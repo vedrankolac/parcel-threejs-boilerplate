@@ -22,13 +22,16 @@ class World {
     const lights = createLights(scene);
     const material = blue(0x222266);
 
+    // fix the build process -- build to build folder not to dist
+    // add floor...
+
     const nItems = 4;
     for (let i = 0; i < nItems; i++) {
       for (let j = 0; j < nItems; j++) {
         let temp_cube = cube(material);
         temp_cube.position.x = (i - nItems/2) * 1.2 + 0.5;
         temp_cube.position.y = (j - nItems/2) * 1.2 + 0.5;
-        temp_cube.position.z = -2;
+        temp_cube.position.z = -4;
         scene.add( temp_cube );
         loop.updatables.push(temp_cube);
       }

@@ -556,6 +556,7 @@ class World {
             let temp_cube = _cubeJs.cube(material);
             temp_cube.position.x = (i - nItems / 2) * 1.2 + 0.5;
             temp_cube.position.y = (j - nItems / 2) * 1.2 + 0.5;
+            temp_cube.position.z = -4;
             scene.add(temp_cube);
             loop.updatables.push(temp_cube);
         }
