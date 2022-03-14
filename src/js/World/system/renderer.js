@@ -1,6 +1,6 @@
 import { WebGLRenderer, sRGBEncoding } from 'three';
 
-function createRenderer() {
+const createRenderer = () => {
   const renderer = new WebGLRenderer({ antialias: true });
   renderer.physicallyCorrectLights = true;
   renderer.setPixelRatio( window.devicePixelRatio );

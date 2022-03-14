@@ -1,6 +1,6 @@
 import { World } from './World/World.js';
 
-function app() {
+const app = () => {
   const world = new World();
   world.start();
 }

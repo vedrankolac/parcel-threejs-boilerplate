@@ -1,6 +1,6 @@
 import { AmbientLight, DirectionalLight, PointLight } from 'three';
 
-function createLights(scene) {
+const createLights = scene => {
   const light_ambient = new AmbientLight({ color: 0x000000, intensity: 1 })
   scene.add(light_ambient)
 
