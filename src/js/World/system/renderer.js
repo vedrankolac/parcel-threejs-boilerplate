@@ -5,7 +5,7 @@ function createRenderer() {
   renderer.physicallyCorrectLights = true;
   renderer.setPixelRatio( window.devicePixelRatio );
   renderer.setSize( window.innerWidth, window.innerHeight );
-  // renderer.outputEncoding = sRGBEncoding;
+  renderer.outputEncoding = sRGBEncoding;
   document.body.appendChild( renderer.domElement );
   return renderer;
 }
