@@ -106,8 +106,10 @@ dist
 # Parcel relatec
 .cache/
 .parcel-cache/
-dist/
-build/
+.dist/
+.build/
+dist
+build
 
 # osx
 .DS_Store
