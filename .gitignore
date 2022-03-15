@@ -107,6 +107,7 @@ dist
 .cache/
 .parcel-cache/
 dist/
+build/
 
 # osx
 .DS_Store

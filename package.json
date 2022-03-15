@@ -1,11 +1,16 @@
 {
   "name": "spatial-audio",
   "source": "src/index.html",
+  "targets": {
+    "default": {
+      "distDir": "./build"
+    }
+  },
   "version": "1.0.0",
   "description": "spatial audio example with three.js and tone.js",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build -d build",
+    "build": "parcel build",
     "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
