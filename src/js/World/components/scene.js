@@ -4,7 +4,7 @@ import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment
 
 const createScene = renderer => {
   const scene = new Scene();
-  scene.background = new Color( 0x666666 );
+  scene.background = new Color( 0xaaaaaa );
   
   const fog = new Fog( 0x000000, 0, 60 );
   scene.fog = fog;
