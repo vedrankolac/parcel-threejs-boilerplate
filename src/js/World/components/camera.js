@@ -1,7 +1,7 @@
 import { PerspectiveCamera } from 'three';
 
 const createCamera = () => {
-  camera = new PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 100 );
+  const camera = new PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 100 );
   camera.position.z = 20;
   return camera;
 }
