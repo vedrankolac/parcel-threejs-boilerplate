@@ -30,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/birdlaketree/parcel-threejs-boilerplate/issues"
   },
-  "homepage": "https://github.com/birdlaketree/parcel-threejs-boilerplate",
+  "homepage": "https://birdlaketree.github.io/parcel-threejs-boilerplate/",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.3.2",
     "parcel": "^2.3.2"
