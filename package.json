@@ -1,5 +1,5 @@
 {
-  "name": "spatial-audio",
+  "name": "parcel-threejs-boilerplate",
   "source": "src/index.html",
   "targets": {
     "default": {
@@ -7,7 +7,7 @@
     }
   },
   "version": "1.0.0",
-  "description": "spatial audio example with three.js and tone.js",
+  "description": "Boilerplate for a fast start with three.js",
   "scripts": {
     "start": "parcel",
     "build": "parcel build --public-url '.'",
@@ -16,18 +16,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/birdlaketree/spatial-audio.git"
+    "url": "git+https://github.com/birdlaketree/parcel-threejs-boilerplate.git"
   },
   "keywords": [
-    "3d",
-    "sound"
+    "javascript",
+    "parcel",
+    "three.js",
+    "3D",
+    "boilerplate"
   ],
   "author": "vedran.kolac@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/birdlaketree/spatial-audio/issues"
+    "url": "https://github.com/birdlaketree/parcel-threejs-boilerplate/issues"
   },
-  "homepage": "https://github.com/birdlaketree/spatial-audio",
+  "homepage": "https://github.com/birdlaketree/parcel-threejs-boilerplate",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.3.2",
     "parcel": "^2.3.2"

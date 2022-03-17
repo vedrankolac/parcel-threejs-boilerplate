@@ -4,9 +4,9 @@ import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment
 
 const createScene = renderer => {
   const scene = new Scene();
-  scene.background = new Color( 0xaaaaaa );
+  scene.background = new Color( 0xcccccc );
   
-  const fog = new Fog( 0x000000, 0, 60 );
+  const fog = new Fog( 0x222222, 0, 60 );
   scene.fog = fog;
   
   const pmremGenerator = new PMREMGenerator(renderer);

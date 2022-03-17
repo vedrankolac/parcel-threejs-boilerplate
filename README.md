@@ -1,5 +1,5 @@
-# spatial-audio
-spatial audio example with three.js and tone.js
+# parcel-threejs-boilerplate
+Boilerplate for a fast start with three.js
 
 ### how to deploy for github pages
 ```bash

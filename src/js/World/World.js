@@ -20,10 +20,7 @@ class World {
 
     const controls = new OrbitControls(camera, renderer.domElement)
     const lights = createLights(scene);
-    const material = blue(0x222288);
-
-    // fix the build process -- build to build folder not to dist
-    // add floor...
+    const material = blue(0x2222cc);
 
     const nItems = 8;
     for (let i = 0; i < nItems; i++) {
