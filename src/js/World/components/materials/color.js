@@ -1,6 +1,6 @@
 import {MeshStandardMaterial} from 'three';
 
-const color = color => {
+const colorStandardMaterial = color => {
   const parameters = {
     color: color,
     emissive: 0x000000,
@@ -11,4 +11,4 @@ const color = color => {
   return material;
 }
 
-export { blue };
+export { colorStandardMaterial };

@@ -5,7 +5,7 @@ import { createRenderer } from './system/renderer.js';
 import { createScene } from './components/scene.js';
 import { createCamera } from './components/camera.js';
 import { createLights } from './components/lights.js';
-import { color } from './components/materials/color.js';
+import { colorStandardMaterial } from './components/materials/color.js';
 import { cube } from './components/meshes/cube.js'
 import { sphere } from './components/meshes/sphere.js'
 
@@ -15,12 +15,13 @@ class World {
     const scene = createScene(renderer);
     const camera = createCamera();
     this.loop = new Loop(camera, scene, renderer);
+    console.log('something');
 
     const controls = new OrbitControls(camera, renderer.domElement)
     const lights = createLights(scene);
-    const material = color(0x2222cc);
+    const material = colorStandardMaterial(0x3333ff);
 
-    const nItems = 8;
+    const nItems = 4;
     for (let i = 0; i < nItems; i++) {
       for (let j = 0; j < nItems; j++) {
         let temp_cube = cube(material);
