@@ -5,22 +5,20 @@ import { createRenderer } from './system/renderer.js';
 import { createScene } from './components/scene.js';
 import { createCamera } from './components/camera.js';
 import { createLights } from './components/lights.js';
-import { blue } from './components/materials/blue.js';
+import { color } from './components/materials/color.js';
 import { cube } from './components/meshes/cube.js'
 import { sphere } from './components/meshes/sphere.js'
-
-let loop;
 
 class World {
   constructor() {
     const renderer = createRenderer();
     const scene = createScene(renderer);
     const camera = createCamera();
-    loop = new Loop(camera, scene, renderer);
+    this.loop = new Loop(camera, scene, renderer);
 
     const controls = new OrbitControls(camera, renderer.domElement)
     const lights = createLights(scene);
-    const material = blue(0x2222cc);
+    const material = color(0x2222cc);
 
     const nItems = 8;
     for (let i = 0; i < nItems; i++) {
@@ -30,17 +28,17 @@ class World {
         temp_cube.position.y = (j - nItems/2) * 1.2 + 0.5;
         temp_cube.position.z = -4;
         scene.add( temp_cube );
-        loop.updatables.push(temp_cube);
+        this.loop.updatables.push(temp_cube);
       }
     }
   }
 
   start() {
-    loop.start();
+    this.loop.start();
   }
 
   stop() {
-    loop.stop();
+    this.loop.stop();
   }
 }
 
